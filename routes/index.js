@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var scanner = process.env.SCANNER || 'none'
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   switch (scanner) {
@@ -12,19 +11,15 @@ router.get('/', function(req, res, next) {
       scanLogo='twistlock-logo.png';
       break;
     default:
-      throw error;
+      scanLogo=scanner+'.png';
   };
   res.render('index',
   {
     title: 'Quarantine Pattern',
-    version: '13',
+    version: '6',
     scanLogo: scanLogo,
     scanner: scanner,
     content: 'Scan Succeeded'
   });
 });
-
-
-module.exports = router;
-
 module.exports = router;
