@@ -1,7 +1,7 @@
 # Quarantine Pattern
 ## Demo Steps
 1. Edit routes\index.js Bump version number
-1.  Set ENV variables for which scanner to test
+1.  Set ENV variables for which scanner to test
     * Aqua
         ```sh
         ACR_NAME=quarantinetest1
