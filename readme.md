@@ -1,9 +1,23 @@
 # Quarantine Pattern
+## Preset
+1.  Log into the az cli, using dogfood
+    ```
+    az cloud set -n dogfood
+    az account set -s KraterTeam
+    az login
+    ```
+
 ## Demo Steps
 
-1. Edit routes\index.js 
-    Bump version number
-1.  Build the image    
+1. clone the repo
+    ```sh
+    git clone https://github.com/AzureCR/quarantine-booth-demo/
+    ```
+1.  switch to the directory
+    ```sh
+    cd quarantine-booth-demo
+    ```
+1.  Build the image
     From bash, execute:
     * Aqua
         ```sh
