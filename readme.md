@@ -1,8 +1,9 @@
 # Quarantine Pattern
 ## Demo Steps
 
-1. Edit routes\index.js Bump version number
-1.  Build the image    
+1. Edit routes\index.js 
+    Bump version number
+1.  Build the image    
     From bash, execute:
     * Aqua
         ```sh
