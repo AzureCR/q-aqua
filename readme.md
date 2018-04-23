@@ -18,6 +18,7 @@
     cd quarantine-booth-demo
     ```
 1.  Build the image
+
     From bash, execute:
     * Aqua
         ```sh
@@ -34,7 +35,15 @@
     * Twsitlock https://q-twistlock.azurewebsites.net/
 
 ## Viewing a failed/quarantined scan
-Edit the dockerfile to reference a clean base image, and update the base node runtime: https://github.com/nodejs/docker-node/issues/690
+Edit the dockerfile to switch between node and node/alpine
+
+The scanners will also refernce an SSRI vulnerability that can currently only be fixed by updating the base node runtime:
+
+* https://github.com/nodejs/docker-node/issues/690
+* https://nodesecurity.io/advisories/565
+
+This adds to the discussion why developers care and need vul scanning as part of their check-in validations, as only developers can typically fix the underlying issues.
+
 ```dockerfile
 FROM node:9
 #FROM node:9-alpine
