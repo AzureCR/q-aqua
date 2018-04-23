@@ -15,8 +15,8 @@
 1.  View the image in the scanner to see the results
 1.  View the image
     * Aqua
-     https://q-aqua.azurewebsites.net/
-    * Twsitlock https://q-twistlock.azurewebsites.net/
+     https://q-aqua.azurewebsites.net/
+    * Twsitlock https://q-twistlock.azurewebsites.net/
 
 ## Viewing a failed/quarantined scan
 Edit the dockerfile to reference a clean base image, and update the base node runtime: https://github.com/nodejs/docker-node/issues/690
