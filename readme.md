@@ -1,29 +1,17 @@
 # Quarantine Pattern
 ## Demo Steps
+
 1. Edit routes\index.js Bump version number
-1.  Set ENV variables for which scanner to test
+1.  Build the image    
+    From bash, execute:
     * Aqua
         ```sh
-        AquaACR_NAME=quarantinetest1
-        SCANNER=aqua
+        ./aqua.sh
         ```
     * Twistlock
+        ```sh
+        ./twistlock.sh
         ```
-        ACR_NAME=quarantinetest2
-        SCANNER=twistlock
-        ```
-1.  Build the image    
-    ```
-    docker build -t $ACR_NAME.azurecr-test.io/q-${SCANNER}:6 --build-arg A_SCANNER=$SCANNER .
-    ```
-1.  ***OPTIONAL***: Run the image
-    ```
-    docker run -p 80:80 $ACR_NAME.azurecr-test.io/q-$SCANNER:6
-    ```
-1.  Push the image
-    ```
-    docker push $ACR_NAME.azurecr-test.io/q-$SCANNER:6
-    ```
 1.  View the image in the scanner to see the results
 1.  View the image
     * Aqua

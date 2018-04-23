@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var scanner = process.env.SCANNER || 'none'
+var version = process.env.VERSION || '0'
 /* GET home page. */
 router.get('/', function(req, res, next) {
   switch (scanner) {
@@ -19,7 +20,8 @@ router.get('/', function(req, res, next) {
     version: '6',
     scanLogo: scanLogo,
     scanner: scanner,
-    content: 'Scan Succeeded'
+    content: 'Scan Succeeded',
+    version: version
   });
 });
 module.exports = router;
